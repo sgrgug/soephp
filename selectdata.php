@@ -25,7 +25,7 @@
             while($row = mysqli_fetch_assoc($result)){
                 // echo "id: " . $row['id'] . " - Name: " . $row['firstname'] . " " . $row['lastname'] . " - Email: " . $row['email'] . "<br>";
                 $fname = $row['firstname'];
-                $lname = $row['lastname'];
+                $lname = $row['order'];
                 $email = $row['email'];
 
                 // echo $row['firstname'];
@@ -40,6 +40,10 @@
         }
 
         // echo $fname;
+
+        //close database
+        mysqli_close($conn);
+        
 
     ?>
 

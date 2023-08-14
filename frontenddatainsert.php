@@ -55,6 +55,15 @@
                     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
                 }
 
+                session_start();
+
+                //redirect
+                header("Location: home.php");
+
+                $_SESSION['email'] = $email;
+
+                // sagar@gmail.com
+
             }
 
 
@@ -62,7 +71,6 @@
         }
 
     ?>
-
 
 
 </body>
